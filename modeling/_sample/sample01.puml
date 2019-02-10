@@ -1,0 +1,24 @@
+@startuml
+
+/'
+▼PlantUML で ER 図（ERD）を描く（似非ではないです） - Qiita
+https://qiita.com/Tachy_Pochy/items/752ef6e3d38e970378f0
+'/
+
+entity "商品カテゴリ" as ItemCategory {
+    + 商品カテゴリID [PK]
+    --
+    商品カテゴリ名
+}
+
+entity "商品" as Item {
+    + 商品ID [PK]
+    --
+    # 商品カテゴリID
+    単価
+    商品名
+}
+
+ItemCategory -do-|{ Item
+
+@enduml
